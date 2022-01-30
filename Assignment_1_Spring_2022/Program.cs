@@ -94,12 +94,12 @@ namespace DIS_Assignmnet1_SPRING_2022
                 //Creating a list with all the vowels
                 List<string> list = new List<string> { "a", "e", "i", "o", "u", "A", "E", "I", "O", "U" };
 
-               
-                //Using foreach loop to check word and replace it with null string
+                //Using foreach loop to check each char in a word, if it's a vowel its being replaced with null string
                 foreach (string i in list)
                 {
                     s = s.Replace(i, "");
                 }
+
                 //Returing the results in Command prompt
                 return s;
 
@@ -138,13 +138,15 @@ namespace DIS_Assignmnet1_SPRING_2022
             {
                 // write your code here.
 
-
+                //Storing length of input srings into variables
                 int bulls_string1_len = bulls_string1.Length;
                 int bulls_string2_len = bulls_string2.Length;
 
+                //Initializing empty strings
                 string compare_string1 = "";
                 string compare_string2 = "";
 
+                //Using for loops to Concatnat all the words into 1 string with all lower cases chars 
                 for (int i = 0; i < bulls_string1_len; i++)
                 {
                     compare_string1 = compare_string1 + bulls_string1[i].ToString().ToLower();
@@ -154,8 +156,8 @@ namespace DIS_Assignmnet1_SPRING_2022
                     compare_string2 = compare_string2 + bulls_string2[i].ToString().ToLower();
                 }
 
+                //Comparing the strings using Equals function
                 if (compare_string1.Equals(compare_string2))
-
                     return true;
                 else
                     return false;
@@ -191,13 +193,20 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
+                //Initializing empty list
                 List<int> bull_bucks_list = new List<int>();
+                //Storing array into the list
                 bull_bucks_list = bull_bucks.ToList();
+                //Variable for storing occurances of the integers
                 int occurance;
+                //Variable for summing up the unique integers
                 int unique_sum = 0;
+                //Using foreach loop and counting all the integers from input array 
                 foreach (int i in bull_bucks)
                 {
+                    //using findall function on array
                     occurance = bull_bucks_list.FindAll(x => x == i).Count();
+                    //If the int appears only once then adding unique_sum variable
                     if (occurance == 1)
                     {
                         unique_sum= unique_sum + i;
@@ -238,13 +247,17 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 // write your code here.
-
+                //getting length of the grid; as it is a square not need to worry about the axis
                 int grid_len = bulls_grid.GetLength(0);
+                //variable for storing sum of the diagonals
                 int grid_sum = 0;
+                //1sr case - when the grid has only 1 element
                 if (grid_len == 1)
                     grid_sum = bulls_grid[0, 0];
+                //2nd case - if the grid is even(even*even)
                 else if (grid_len % 2 == 0)
                 {
+                    //using for loop and adding 4 corners of the square
                     for (int i = 0; i < grid_len / 2; i++)
                     {
                         grid_sum = grid_sum + bulls_grid[i, i] + bulls_grid[grid_len - 1 - i, grid_len - 1 - i]
@@ -252,14 +265,17 @@ namespace DIS_Assignmnet1_SPRING_2022
                     }
 
                 }
+                //3rd case - if the grid is odd (odd*odd)
                 else if (grid_len % 2 == 1)
                 {
+                    //using for loop and adding 4 corners of the square 
                     for (int i = 0; i < (grid_len - 1) / 2; i++)
                     {
                         grid_sum = grid_sum + bulls_grid[i, i] + bulls_grid[grid_len - 1 - i, grid_len - 1 - i]
                            + bulls_grid[i, grid_len - 1 - i] + bulls_grid[grid_len - 1 - i, i]
                            ;
                     }
+                    //adding the center element for odd grid
                     grid_sum = grid_sum + bulls_grid[(grid_len - 1) / 2, (grid_len - 1) / 2];
                 }
 
@@ -293,12 +309,15 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
+                //initializing new array of same length as input string
                 string[] new_string = new string[bulls_string.Length];
-
+                //using foreach loop on indices array
                 foreach (int i in indices)
                 {
+                    //storing chars from input string into new array as per position of the indices array
                     new_string[i] = bulls_string[i].ToString();
                 }
+                //using join and concatnating all the items from array into string
                 return string.Join("",new_string);
             }
             catch (Exception e)
@@ -338,15 +357,19 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
+                //initializing empty strings
                 String prefix_string ="";
-                int index_ch = bulls_string6.IndexOf(ch);
                 string rev_string = "";
+                //finding and storing the index location of 'ch' into string
+                int index_ch = bulls_string6.IndexOf(ch);
+                //using for loop till the location of 'ch'
                 for (int i = 0; i <= index_ch; i++)
                 {
+                    //storing chars in empty string in reverse order
                     rev_string = bulls_string6[i] + rev_string;
                 }
+                //removing chars till 'ch' from the input string and concatnating reversed string 
                 prefix_string = rev_string + bulls_string6.Substring(index_ch + 1);
-
                 return (prefix_string);
             }
             catch (Exception)
