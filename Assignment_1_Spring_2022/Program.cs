@@ -5,6 +5,8 @@ WRITE YOUR CODE IN THE RESPECTIVE FUNCTION BLOCK
 
 */
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DIS_Assignmnet1_SPRING_2022
 {
@@ -89,9 +91,18 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here
-                String final_string ="";
-                return final_string;
+                //Creating a list with all the vowels
+                List<string> list = new List<string> { "a", "e", "i", "o", "u", "A", "E", "I", "O", "U" };
+
+               
+                //Using foreach loop to check word and replace it with null string
+                foreach (string i in list)
+                {
+                    s = s.Replace(i, "");
+                }
+                //Returing the results in Command prompt
+                return s;
+
             }
             catch (Exception)
             {
@@ -126,7 +137,29 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 // write your code here.
-                return false;
+
+
+                int bulls_string1_len = bulls_string1.Length;
+                int bulls_string2_len = bulls_string2.Length;
+
+                string compare_string1 = "";
+                string compare_string2 = "";
+
+                for (int i = 0; i < bulls_string1_len; i++)
+                {
+                    compare_string1 = compare_string1 + bulls_string1[i].ToString().ToLower();
+                }
+                for (int i = 0; i < bulls_string2_len; i++)
+                {
+                    compare_string2 = compare_string2 + bulls_string2[i].ToString().ToLower();
+                }
+
+                if (compare_string1.Equals(compare_string2))
+
+                    return true;
+                else
+                    return false;
+
             }
             catch (Exception)
             {
@@ -158,9 +191,8 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here
                 return 0;
-
+ 
             }
             catch (Exception)
             {
@@ -224,8 +256,13 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                // write your code here.
-                return "null";
+                string[] new_string = new string[bulls_string.Length];
+
+                foreach (int i in indices)
+                {
+                    new_string[i] = bulls_string[i].ToString();
+                }
+                return string.Join("",new_string);
             }
             catch (Exception e)
             {
@@ -265,7 +302,15 @@ namespace DIS_Assignmnet1_SPRING_2022
             try
             {
                 String prefix_string ="";
-                return prefix_string;
+                int index_ch = bulls_string6.IndexOf(ch);
+                string rev_string = "";
+                for (int i = 0; i <= index_ch; i++)
+                {
+                    rev_string = bulls_string6[i] + rev_string;
+                }
+                prefix_string = rev_string + bulls_string6.Substring(index_ch + 1);
+
+                return (prefix_string);
             }
             catch (Exception)
             {
