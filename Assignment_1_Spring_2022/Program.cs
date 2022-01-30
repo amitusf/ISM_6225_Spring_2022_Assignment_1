@@ -1,6 +1,6 @@
 ﻿/* 
  
-YOU ARE NOT ALLOWED TO MODIFY ANY FUNCTION DEFINATION's PROVIDED.
+YOU ARE NOT ALLOWED TO MODIFY ANY FUNCTION DEFINITION's PROVIDED.
 WRITE YOUR CODE IN THE RESPECTIVE FUNCTION BLOCK
 
 */
@@ -191,7 +191,20 @@ namespace DIS_Assignmnet1_SPRING_2022
         {
             try
             {
-                return 0;
+                List<int> bull_bucks_list = new List<int>();
+                bull_bucks_list = bull_bucks.ToList();
+                int occurance;
+                int unique_sum = 0;
+                foreach (int i in bull_bucks)
+                {
+                    occurance = bull_bucks_list.FindAll(x => x == i).Count();
+                    if (occurance == 1)
+                    {
+                        unique_sum= unique_sum + i;
+                    }
+                }
+                          
+                return unique_sum;
  
             }
             catch (Exception)
