@@ -239,7 +239,24 @@ namespace DIS_Assignmnet1_SPRING_2022
             {
                 // write your code here.
 
-                return 0;
+                int grid_len = bulls_grid.GetLength(0);
+                int grid_sum = 0;
+                
+                if (grid_len == 1)
+                    grid_sum = bulls_grid[0, 0];
+               else
+                {
+                    for(int i = 0; i < grid_len; i++)
+                    {
+                        grid_sum = grid_sum+ bulls_grid[i, i] + bulls_grid[grid_len - 1-i, grid_len - 1-i]
+                           + bulls_grid[i, grid_len - 1-i] + bulls_grid[grid_len - 1-i, i];
+                    }
+                    
+                }
+                    
+               
+                
+                return grid_sum;
             }
             catch (Exception e)
             {
