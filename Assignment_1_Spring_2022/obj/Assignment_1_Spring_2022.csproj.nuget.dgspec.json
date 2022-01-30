@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Godmode\\source\\repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj": {}
+    "C:\\Users\\Godmode\\Source\\Repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Godmode\\source\\repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj": {
+    "C:\\Users\\Godmode\\Source\\Repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Godmode\\source\\repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj",
+        "projectUniqueName": "C:\\Users\\Godmode\\Source\\Repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj",
         "projectName": "Assignment_1_Spring_2022",
-        "projectPath": "C:\\Users\\Godmode\\source\\repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj",
+        "projectPath": "C:\\Users\\Godmode\\Source\\Repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\Assignment_1_Spring_2022.csproj",
         "packagesPath": "C:\\Users\\Godmode\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Godmode\\source\\repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\obj\\",
+        "outputPath": "C:\\Users\\Godmode\\Source\\Repos\\ISM_6225_Spring_2022_Assignment_1\\Assignment_1_Spring_2022\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Godmode\\AppData\\Roaming\\NuGet\\NuGet.Config",

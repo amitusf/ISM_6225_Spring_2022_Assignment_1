@@ -241,21 +241,28 @@ namespace DIS_Assignmnet1_SPRING_2022
 
                 int grid_len = bulls_grid.GetLength(0);
                 int grid_sum = 0;
-                
                 if (grid_len == 1)
                     grid_sum = bulls_grid[0, 0];
-               else
+                else if (grid_len % 2 == 0)
                 {
-                    for(int i = 0; i < grid_len; i++)
+                    for (int i = 0; i < grid_len / 2; i++)
                     {
-                        grid_sum = grid_sum+ bulls_grid[i, i] + bulls_grid[grid_len - 1-i, grid_len - 1-i]
-                           + bulls_grid[i, grid_len - 1-i] + bulls_grid[grid_len - 1-i, i];
+                        grid_sum = grid_sum + bulls_grid[i, i] + bulls_grid[grid_len - 1 - i, grid_len - 1 - i]
+                           + bulls_grid[i, grid_len - 1 - i] + bulls_grid[grid_len - 1 - i, i];
                     }
-                    
+
                 }
-                    
-               
-                
+                else if (grid_len % 2 == 1)
+                {
+                    for (int i = 0; i < (grid_len - 1) / 2; i++)
+                    {
+                        grid_sum = grid_sum + bulls_grid[i, i] + bulls_grid[grid_len - 1 - i, grid_len - 1 - i]
+                           + bulls_grid[i, grid_len - 1 - i] + bulls_grid[grid_len - 1 - i, i]
+                           ;
+                    }
+                    grid_sum = grid_sum + bulls_grid[(grid_len - 1) / 2, (grid_len - 1) / 2];
+                }
+
                 return grid_sum;
             }
             catch (Exception e)
