@@ -110,6 +110,10 @@ namespace DIS_Assignmnet1_SPRING_2022
             }
 
         }
+        //reflection - question was straigtforward and simple
+        //learning - it made me realise that with Intellisense I dont need to remember the syntaxes,
+        //time taken - 15 mins
+
 
         /* 
         <summary>
@@ -170,6 +174,10 @@ namespace DIS_Assignmnet1_SPRING_2022
             }
 
         }
+        //reflection - initiallly i was trying to compare each chars from both the strings, it was getting complex so dropped that approach
+        //learning - came to know about Equals function, there are so many in built functions for strings
+        //time taken - 30 mins
+
         /*
         <summary> 
        You are given an integer array bull_bucks. The unique elements of an array are the elements that appear exactly once in the array.
@@ -221,6 +229,11 @@ namespace DIS_Assignmnet1_SPRING_2022
                 throw;
             }
         }
+        //reflection - I tried different approaches like taking distinct and subtracting from main array but did not get right answers 
+        //learning - exlpored funtions for array
+        // time taken - 3 hours
+
+
         /*
 
         <summary>
@@ -289,7 +302,9 @@ namespace DIS_Assignmnet1_SPRING_2022
             }
 
         }
-
+        //reflection - i am more comfortable with 2d array now
+        //learning - questions seemed hard at the beginning, could not find solution for few hours
+        //time taken - 8 hours
 
 
         /*
@@ -327,6 +342,10 @@ namespace DIS_Assignmnet1_SPRING_2022
             }
 
         }
+        //reflection - tried zip both the array and sort but could not succeed at it, developed this solution instead
+        //learning - i have used zip function in python but could not replicate the same here as I am new to the syntaxes
+        //time taken - 4 hours
+
 
         /*
          <summary>
@@ -377,6 +396,9 @@ namespace DIS_Assignmnet1_SPRING_2022
 
                 throw;
             }
+            //reflection - the question was similar to examples in Beginners guide to C# book
+            //learning - came to know about indexOf function
+            //time taken - 30 hour
 
         }
     }
