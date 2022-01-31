@@ -302,7 +302,7 @@ namespace DIS_Assignmnet1_SPRING_2022
             }
 
         }
-        //reflection - i am more comfortable with 2d array now
+        //reflection - I am more comfortable with 2d array now, this solution is more generic, works for rectangle as well
         //learning - questions seemed hard at the beginning, could not find solution for few hours
         //time taken - 8 hours
 
@@ -330,10 +330,15 @@ namespace DIS_Assignmnet1_SPRING_2022
                 foreach (int i in indices)
                 {
                     //storing chars from input string into new array as per position of the indices array
-                    new_string[i] = bulls_string[i].ToString();
+                    new_string[indices[i]] = bulls_string[i].ToString();
                 }
-                //using join and concatnating all the items from array into string
-                return string.Join("",new_string);
+                //using for loop and concatnating all the items from array into string in order
+                string s = ""; // initialinzinng empty string
+                for (int j = 0; j < indices.Length; j++)
+                {
+                    s = s + new_string[j];
+                }
+                return s;
             }
             catch (Exception e)
             {
